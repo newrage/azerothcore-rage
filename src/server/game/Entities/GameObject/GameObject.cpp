@@ -24,6 +24,7 @@
 #include "World.h"
 #include "Transport.h"
 #include "AccountMgr.h"
+
 #ifdef ELUNA
 #include "LuaEngine.h"
 #endif
@@ -1817,6 +1818,12 @@ void GameObject::Use(Unit* user)
                     return;
 
                 Player* player = user->ToPlayer();
+			
+            if (player->getRace() == RACE_GOBLIN || player->getRace() == RACE_WORGEN)
+            {
+                player->GetSession()->SendNotification("Goblins/Worgens can't use the BarberShop.");
+                return;
+           }
 
                 // fallback, will always work
                 player->TeleportTo(GetMapId(), GetPositionX(), GetPositionY(), GetPositionZ(), GetOrientation(), TELE_TO_NOT_LEAVE_TRANSPORT | TELE_TO_NOT_LEAVE_COMBAT | TELE_TO_NOT_UNSUMMON_PET);

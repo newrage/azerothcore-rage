@@ -769,6 +769,8 @@ void Player::UpdateDodgePercentage()
     m_realDodge = m_realDodge < 0.0f ? 0.0f : m_realDodge;
     float value = std::max(diminishing + nondiminishing, 0.0f);
 
+    if(value > 50)
+		value = 50;
     SetStatFloatValue(PLAYER_DODGE_PERCENTAGE, value);
 }
 

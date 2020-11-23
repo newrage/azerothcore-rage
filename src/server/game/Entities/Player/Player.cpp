@@ -5962,17 +5962,17 @@ void Player::GetDodgeFromAgility(float& diminishing, float& nondiminishing)
     // Crit/agility to dodge/agility coefficient multipliers; 3.2.0 increased required agility by 15%
     const float crit_to_dodge[MAX_CLASSES] =
     {
-        0.85f / 1.15f,  // Warrior
-        1.00f / 1.15f,  // Paladin
-        1.11f / 1.15f,  // Hunter
-        2.00f / 1.15f,  // Rogue
-        1.00f / 1.15f,  // Priest
-        0.85f / 1.15f,  // DK
-        1.60f / 1.15f,  // Shaman
-        1.00f / 1.15f,  // Mage
-        0.97f / 1.15f,  // Warlock (?)
+         0.85f/95.6f,    // Warrior
+         1.00f/95.6f,    // Paladin
+         1.11f/95.6f,    // Hunter
+         2.00f/95.6f,    // Rogue
+         1.00f/95.6f,    // Priest
+         0.85f/95.6f,    // DK
+         1.60f/95.6f,    // Shaman
+         1.00f/95.6f,    // Mage
+         0.97f/95.6f,    // Warlock (?)
         0.0f,           // ??
-        2.00f / 1.15f   // Druid
+         2.00f/95.6f     // Druid
     };
 
     uint8 level = getLevel();

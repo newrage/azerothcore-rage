@@ -228,7 +228,7 @@ void WorldSession::HandleMessagechatOpcode(WorldPacket& recvData)
                         specialMessageLimit = 15;
                         break;
                     case CHAT_MSG_WHISPER:
-                        if (sender->getLevel() >= 80)
+                    if (sender->getLevel() >= 255)
                             specialMessageLimit = 15;
                         break;
                 }

@@ -318,8 +318,9 @@ void WorldSession::HandleWhoOpcode(WorldPacket& recvData)
 
         // check if target's level is in level range
         uint8 lvl = itr->second->getLevel();
+		/* Remove check so Level 255 shows up in who list
         if (lvl < level_min || lvl > level_max)
-            continue;
+            continue;*/
 
         // check if class matches classmask
         uint32 class_ = itr->second->getClass();

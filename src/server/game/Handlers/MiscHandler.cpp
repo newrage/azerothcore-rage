@@ -412,7 +412,6 @@ void WorldSession::HandleWhoOpcode(WorldPacket& recvData)
     // sLog->outDebug(LOG_FILTER_NETWORKIO, "WORLD: Send SMSG_WHO Message");
 }
 
-
 void WorldSession::HandleLogoutRequestOpcode(WorldPacket& /*recv_data*/)
 {
 #if defined(ENABLE_EXTRAS) && defined(ENABLE_EXTRA_LOGS)
@@ -612,7 +611,6 @@ void WorldSession::HandleBugOpcode(WorldPacket& recv_data)
     recv_data >> suggestion >> contentlen >> content;
 
     recv_data >> typelen >> type;
-
 
 #if defined(ENABLE_EXTRAS) && defined(ENABLE_EXTRA_LOGS)
     if (suggestion == 0)

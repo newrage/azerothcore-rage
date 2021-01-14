@@ -1192,10 +1192,14 @@ void AddOutdoorPvPScripts()
 
 
 //~ void AddSC_MySuperScript();
+void AddSC_item_level80();
+void AddSC_item_level255();
 
 void AddCustomScripts()
 {
 #ifdef SCRIPTS
     //~ AddSC_MySuperScript();
+	AddSC_item_level80();
+	AddSC_item_level255();
 #endif
 }
